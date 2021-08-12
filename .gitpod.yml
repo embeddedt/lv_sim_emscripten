@@ -1,7 +1,10 @@
 # Commands to start on workspace startup
 tasks:
   - init: npm install -g live-server
-    command: live-server --port 8080
+    before: gp sync-await build-dir
+    command: live-server --port=8080 cmbuild
+  - init: mkdir cmbuild && cd cmbuild && emcmake cmake ..
+    command: cd cmbuild && emmake make -j4 && gp sync-done build-dir
 # Ports to expose on workspace startup
 ports:
   - port: 8080
