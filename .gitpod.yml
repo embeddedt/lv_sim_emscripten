@@ -1,10 +1,9 @@
 # Commands to start on workspace startup
 tasks:
   - init: npm install -g live-server
-    before: gp sync-await build-dir
-    command: live-server --port=8080 cmbuild
-  - init: mkdir cmbuild && cd cmbuild && . /home/gitpod/emsdk/emsdk_env.sh && emcmake cmake ..
-    command: emmake make -j4 && gp sync-done build-dir
+    command: mkdir -p cmbuild && live-server --port=8080 cmbuild
+  - init: mkdir -p cmbuild && cd cmbuild && . /home/gitpod/emsdk/emsdk_env.sh && emcmake cmake ..
+    prebuild: emmake make -j4
 # Ports to expose on workspace startup
 ports:
   - port: 8080
