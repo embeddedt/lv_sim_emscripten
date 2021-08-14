@@ -4,7 +4,7 @@
 
 The result looks like this https://lvgl.io/demos
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](gitpod.io/#https://github.com/embeddedt/lv_sim_emscripten)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/embeddedt/lv_sim_emscripten)
 
 
 # How to get started
